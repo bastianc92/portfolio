@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Hace que el sitio se vea bien en celulares -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebastian Castañeda · Developer</title>
+
+  <!-- Fuentes de Google Fonts (se cargan desde internet) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Iconos de Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <!-- Nuestro archivo de estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVEGACIÓN
+       La barra fija en la parte superior
+  ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">SC<span class="dot">.</span></span>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <!-- Botón menú para celular -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <i class="ti ti-menu-2"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO - Sección principal / portada
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <!-- Círculos decorativos de fondo -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge fade-in">
+          <span class="badge-dot"></span>
+          Disponible para prácticas y trabajo junior
+        </div>
+
+        <!-- PERSONALIZA: cambia el nombre si quieres -->
+        <h1 class="hero-title fade-in delay-1">
+          Hola, soy<br>
+          <span class="highlight">Sebastian</span><br>
+          Castañeda<span class="dot">.</span>
+        </h1>
+
+        <p class="hero-subtitle fade-in delay-2">
+          Tecnólogo en Desarrollo de Software · Último semestre ITM<br>
+          Apasionado por <strong>Flutter</strong>, <strong>Spring Boot</strong> y construir cosas que funcionen.
+        </p>
+
+        <div class="hero-actions fade-in delay-3">
+          <a href="#proyectos" class="btn btn-primary">
+            Ver proyectos <i class="ti ti-arrow-right"></i>
+          </a>
+          <a href="#contacto" class="btn btn-ghost">
+            Contáctame
+          </a>
+        </div>
+
+        <!-- Logos de tecnologías principales -->
+        <div class="hero-tech fade-in delay-4">
+          <span class="tech-label">Stack principal:</span>
+          <div class="tech-pills">
+            <span class="tech-pill">Flutter</span>
+            <span class="tech-pill">Spring Boot</span>
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Dart</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta flotante decorativa -->
+      <div class="hero-card fade-in delay-2">
+        <div class="hero-card-header">
+          <div class="card-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="card-title">MyVaccineAPI.java</span>
+        </div>
+        <div class="hero-card-code">
+          <pre><code><span class="c-keyword">@RestController</span>
+<span class="c-keyword">@RequestMapping</span>(<span class="c-string">"/api/vaccines"</span>)
+<span class="c-keyword">public class</span> <span class="c-class">VaccineController</span> {
+
+  <span class="c-keyword">@GetMapping</span>
+  <span class="c-keyword">public</span> List&lt;Vaccine&gt; getAll() {
+    <span class="c-keyword">return</span> service.findAll();
+  }
+
+  <span class="c-keyword">@PostMapping</span>
+  <span class="c-keyword">public</span> Vaccine create(
+    <span class="c-keyword">@RequestBody</span> Vaccine v) {
+    <span class="c-keyword">return</span> service.save(v);
+  }
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOBRE MÍ
+  ============================================================ -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">01</span>
+        <h2 class="section-title">Sobre mí</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <!-- PERSONALIZA: edita este texto con tu historia real -->
+          <p>
+            Soy estudiante de último semestre de <strong>Tecnología en Desarrollo de Software</strong>
+            en el ITM, Medellín. Desde que escribí mi primer "Hola Mundo" quedé enganchado con
+            la programación y no he parado.
+          </p>
+          <p>
+            Me especializo en <strong>desarrollo backend con Spring Boot</strong> y
+            <strong>aplicaciones móviles con Flutter</strong>. Me gusta entender cómo funcionan
+            las cosas por dentro, escribir código limpio y documentar bien mis proyectos.
+          </p>
+          <p>
+            Busco mi primera experiencia profesional donde pueda aportar, aprender en equipo
+            y crecer como desarrollador.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <!-- PERSONALIZA: cambia el número de proyectos -->
+              <span class="stat-number">6+</span>
+              <span class="stat-label">Proyectos en GitHub</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Años estudiando</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Tecnologías dominadas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-info reveal delay-1">
+          <div class="info-card">
+            <h3>Detalles</h3>
+            <ul class="info-list">
+              <li>
+                <i class="ti ti-map-pin"></i>
+                <!-- PERSONALIZA -->
+                Medellín, Colombia
+              </li>
+              <li>
+                <i class="ti ti-school"></i>
+                ITM · Último semestre
+              </li>
+              <li>
+                <i class="ti ti-briefcase"></i>
+                Buscando empleo / Junior
+              </li>
+              <li>
+                <i class="ti ti-language"></i>
+                Español (nativo) · Inglés (básico)
+              </li>
+            </ul>
+
+            <!-- PERSONALIZA: reemplaza el href con tu CV real -->
+            <a href="assets/HojadeVida_SebastianCastaneda_.pdf" download class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; justify-content: center;">
+  <i class="ti ti-download"></i> Descargar CV
+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HABILIDADES
+  ============================================================ -->
+  <section class="section section-dark" id="habilidades">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Habilidades</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- PERSONALIZA: agrega o quita tecnologías según lo que sepas -->
+        <div class="skill-category-card reveal">
+          <div class="skill-cat-icon"><i class="ti ti-server"></i></div>
+          <h3>Backend</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Spring Boot</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Java</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 60%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">REST APIs</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 70%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal delay-1">
+          <div class="skill-cat-icon"><i class="ti ti-device-mobile"></i></div>
+          <h3>Mobile</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Flutter</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 70%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Dart</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 65%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Firebase</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 55%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal delay-2">
+          <div class="skill-cat-icon"><i class="ti ti-code"></i></div>
+          <h3>Frontend</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">HTML / CSS</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 65%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 50%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">C#</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 60%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category-card reveal delay-3">
+          <div class="skill-cat-icon"><i class="ti ti-tools"></i></div>
+          <h3>Herramientas</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Git / GitHub</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 70%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">VS Code</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Postman</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w: 65%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROYECTOS
+  ============================================================ -->
+  <section class="section" id="proyectos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Proyectos</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROYECTO 1 - PERSONALIZA con tu descripción real -->
+        <article class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon-wrap">
+              <i class="ti ti-vaccine"></i>
+            </div>
+            <div class="project-links-wrap">
+              <!-- PERSONALIZA: cambia el href por el link real de tu repo -->
+              <a href="https://github.com/bastianc92/My-vaccine-api-2025" target="_blank" class="icon-btn" aria-label="Ver en GitHub">
+                <i class="ti ti-brand-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">My Vaccine API</h3>
+          <p class="project-desc">
+            API REST para gestión de vacunas. Permite registrar pacientes, consultar historial
+            de vacunación y administrar esquemas. Construida con Spring Boot y arquitectura por capas.
+          </p>
+          <div class="project-tags">
+            <span>Spring Boot</span>
+            <span>Java</span>
+            <span>REST API</span>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2 -->
+        <article class="project-card reveal delay-1">
+          <div class="project-top">
+            <div class="project-icon-wrap">
+              <i class="ti ti-photo"></i>
+            </div>
+            <div class="project-links-wrap">
+              <a href="https://github.com/bastianc92/Galeria_imagenes_flutter" target="_blank" class="icon-btn" aria-label="Ver en GitHub">
+                <i class="ti ti-brand-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Galería de Imágenes</h3>
+          <p class="project-desc">
+            Aplicación móvil en Flutter integrada con Firebase. Los usuarios pueden subir,
+            organizar y visualizar imágenes con autenticación incluida.
+          </p>
+          <div class="project-tags">
+            <span>Flutter</span>
+            <span>Dart</span>
+            <span>Firebase</span>
+            <span>HTML</span>
+          </div>
+        </article>
+
+        <!-- PROYECTO 3 -->
+        <article class="project-card reveal delay-2">
+          <div class="project-top">
+            <div class="project-icon-wrap">
+              <i class="ti ti-code-dots"></i>
+            </div>
+            <div class="project-links-wrap">
+              <a href="https://github.com/bastianc92/Csharp-desde-cero" target="_blank" class="icon-btn" aria-label="Ver en GitHub">
+                <i class="ti ti-brand-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">C# desde cero</h3>
+          <p class="project-desc">
+            Repositorio de aprendizaje progresivo de C#. Incluye ejercicios, conceptos
+            de POO, estructuras de datos y proyectos pequeños bien documentados.
+          </p>
+          <div class="project-tags">
+            <span>C#</span>
+            <span>.NET</span>
+            <span>POO</span>
+          </div>
+        </article>
+
+        <!-- PROYECTO 4 - PERSONALIZA o agrega más -->
+        <article class="project-card reveal delay-3">
+          <div class="project-top">
+            <div class="project-icon-wrap">
+              <i class="ti ti-device-desktop-code"></i>
+            </div>
+            <div class="project-links-wrap">
+              <a href="https://github.com/bastianc92" target="_blank" class="icon-btn" aria-label="Ver en GitHub">
+                <i class="ti ti-brand-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Portfolio Web</h3>
+          <p class="project-desc">
+            Este mismo portafolio. Construido desde cero con HTML, CSS y JavaScript puro.
+            Diseño responsivo, animaciones CSS y publicado con GitHub Pages.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects-cta reveal">
+        <a href="https://github.com/bastianc92" target="_blank" class="btn btn-outline">
+          <i class="ti ti-brand-github"></i> Ver todos mis repos en GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACTO
+  ============================================================ -->
+  <section class="section section-dark" id="contacto">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Contacto</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-text reveal">
+          <h3>¿Tienes una oportunidad o proyecto?</h3>
+          <p>
+            Estoy buscando activamente mi primer trabajo como desarrollador junior.
+            Si tienes algo interesante, escríbeme. Respondo rápido.
+          </p>
+
+          <div class="contact-links">
+            <!-- PERSONALIZA: cambia el email y links -->
+            <a href="mailto:scastadi92@hotmail.com" class="contact-link">
+  <div class="contact-link-icon"><i class="ti ti-mail"></i></div>
+  <div>
+    <span class="contact-link-label">Email</span>
+    <span class="contact-link-value">scastadi92@hotmail.com</span>
+  </div>
+</a>
+            <a href="https://github.com/bastianc92" target="_blank" class="contact-link">
+              <div class="contact-link-icon"><i class="ti ti-brand-github"></i></div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">bastianc92</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/sebastian-casta%C3%B1eda-2772b924b/" target="_blank" class="contact-link">
+              <div class="contact-link-icon"><i class="ti ti-brand-linkedin"></i></div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">Sebastian Castañeda</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <form class="contact-form reveal delay-1" id="contactForm">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre la oportunidad..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Enviar mensaje <i class="ti ti-send"></i>
+          </button>
+          <!-- Mensaje de confirmación (oculto por defecto) -->
+          <div class="form-success" id="formSuccess">
+            <i class="ti ti-circle-check"></i> ¡Mensaje enviado! Te respondo pronto.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <span class="nav-logo">SC<span class="dot">.</span></span>
+      <p>Diseñado y construido por Sebastian Castañeda · 2026</p>
+      <p class="footer-sub">Hecho con HTML, CSS y JS · Medellín, Colombia 🇨🇴</p>
+    </div>
+  </footer>
+
+  <!-- Nuestro archivo JavaScript al final del body -->
+  <script src="js/main.js"></script>
+</body>
+</html>
